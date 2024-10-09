@@ -6,14 +6,14 @@ local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regul
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "Template Entity",
+		Name = "Fake Rush Example",
 		Asset = "https://github.com/RegularVynixu/Utilities/raw/main/Doors/Entity%20Spawner/Assets/Entities/Rush.rbxm",
-		HeightOffset = 0
+		HeightOffset = 1
 	},
 	Lights = {
 		Flicker = {
 			Enabled = true,
-			Duration = 1
+			Duration = 10
 		},
 		Shatter = true,
 		Repair = false
@@ -23,20 +23,20 @@ local entity = spawner.Create({
 	},
 	CameraShake = {
 		Enabled = true,
-		Range = 100,
+		Range = 110,
 		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 100,
-		Delay = 2,
-		Reversed = false
+		Speed = 150,
+		Delay = 3,
+		Reversed = true
 	},
 	Rebounding = {
 		Enabled = true,
 		Type = "Ambush", -- "Blitz"
-		Min = 1,
-		Max = 1,
-		Delay = 2
+		Min = 3,
+		Max = 5,
+		Delay = 3
 	},
 	Damage = {
 		Enabled = true,
@@ -51,7 +51,7 @@ local entity = spawner.Create({
 	},
 	Death = {
 		Type = "Guiding", -- "Curious"
-		Hints = {"Death", "Hints", "Go", "Here"},
+		Hints = {"You Death To Fake Rush", "When Light Flicker Long", "You Need To Go Hide", "Here"},
 		Cause = ""
 	}
 })
